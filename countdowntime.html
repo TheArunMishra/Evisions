@@ -1,0 +1,68 @@
+<br>
+<br>
+<br>
+<br>
+<div class="container-fluid time">
+  <div class="row">
+    <div class="container" style="background:#173463; border: 1px solid #fff; box-shadow: 5px 5px 5px grey;">
+        <table class="table">
+          <tr colspan="4">
+            <td style="font-size:20px; font-weight:900; text-align: right; color:#fff; background:#173463;">Noida Upcoming Batch</td>
+          </tr>
+          <tr style="font-size:30px; text-align:center; color:#fff;">
+            <td id="days">120</td>
+            <td id="hours">4</td>
+            <td id="minutes">12</td>
+            <td id="seconds">22</td>
+          </tr>
+          <tr style="font-size:14px; text-align:center; color:#fff;">
+            <td>Days</td>
+            <td>Hours</td>
+            <td>Minutes</td>
+            <td>Seconds</td>
+          </tr>
+        </table>
+        <script type="text/javascript">
+
+          function countdown(){
+            var now = new Date();
+            var eventDate = new Date(2018, 07, 30);
+
+            var currentTiime = now.getTime();
+            var eventTime = eventDate.getTime();
+
+            var remTime = eventTime - currentTiime;
+
+            var s = Math.floor(remTime / 1000);
+            var m = Math.floor(s / 60);
+            var h = Math.floor(m / 60);
+            var d = Math.floor(h / 24);
+
+            h %= 24;
+            m %= 60;
+            s %= 60;
+
+            h = (h < 10) ? "0" + h : h;
+            m = (m < 10) ? "0" + m : m;
+            s = (s < 10) ? "0" + s : s;
+
+            document.getElementById("days").textContent = d;
+            document.getElementById("days").innerText = d;
+
+            document.getElementById("hours").textContent = h;
+            document.getElementById("minutes").textContent = m;
+            document.getElementById("seconds").textContent = s;
+
+            setTimeout(countdown, 1000);
+          }
+
+          countdown();
+        </script>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
